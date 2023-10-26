@@ -1,7 +1,6 @@
 # PeacockPortfolios
 
-![PeacockPortfolios Logo](New portfolio Version-2
-/Portfolio Version-2/img_/log.png)
+![PeacockPortfolios Logo](Portfolio%20Version-2/img_/log.png)
 
 Welcome to PeacockPortfolios, a showcase of my professional journey and creative work. This portfolio is a testament to my commitment to excellence and innovation.
 
