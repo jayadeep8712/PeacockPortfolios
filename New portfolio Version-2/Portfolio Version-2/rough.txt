@@ -1,0 +1,136 @@
+.circle1 {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle1 .points {
+    width: 5px;
+    height: 10px;
+    background-color: var(--bg-color); 
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(calc(var(--i) * var(--rot))) translateY(-45px);
+  }
+  .circle2 {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle2 .points {
+    width: 5px;
+    height: 10px;
+    background-color: var(--bg-color); 
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(calc(var(--i) * var(--rot))) translateY(-45px);
+  }
+  
+  .circle3 {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle3 .points {
+    width: 5px;
+    height: 10px;
+    background-color: var(--bg-color); 
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(calc(var(--i) * var(--rot))) translateY(-45px);
+  }
+
+  -----------------------------------------------
+
+  <div class="box">
+    <div class="circle1" data-dots="80" data-percent="80"></div>
+    <div class="text">
+      <big>80%</big>
+      <small>Creativity</small>
+    </div>
+  </div>
+  <div class="box">
+    <div class="circle2" data-dots="80" data-percent="85"></div>
+    <div class="text">
+      <big>85%</big>
+      <small>Project Management</small>
+    </div>
+  </div>
+  <div class="box">
+    <div class="circle3" data-dots="80" data-percent="70"></div>
+    <div class="text">
+      <big>70%</big>
+      <small>Communication</small>
+    </div>
+  </div>
+
+-----------------------------------------------------------
+
+
+const circles1 = document.querySelectorAll('.circle1');
+circles1.forEach(elem => {
+    var dots = elem.getAttribute("data-dots");
+    var marked = elem.getAttribute("data-percent");
+    var percent = Math.floor((dots * marked) / 100);
+    var points = "";
+    var rotate = 360 / dots;
+
+    for (let i = 0; i < dots; i++) {
+        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
+    }
+    elem.innerHTML = points;
+
+    const pointsMarked = elem.querySelectorAll('.points');
+    for (let i = 0; i < percent; i++) {
+        pointsMarked[i].classList.add('marked');
+    }
+});
+
+const circles2 = document.querySelectorAll('.circle2');
+circles2.forEach(elem => {
+    var dots = elem.getAttribute("data-dots");
+    var marked = elem.getAttribute("data-percent");
+    var percent = Math.floor((dots * marked) / 100);
+    var points = "";
+    var rotate = 360 / dots;
+
+    for (let i = 0; i < dots; i++) {
+        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
+    }
+    elem.innerHTML = points;
+
+    const pointsMarked = elem.querySelectorAll('.points');
+    for (let i = 0; i < percent; i++) {
+        pointsMarked[i].classList.add('marked');
+    }
+});
+
+const circles3 = document.querySelectorAll('.circle3');
+circles3.forEach(elem => {
+    var dots = elem.getAttribute("data-dots");
+    var marked = elem.getAttribute("data-percent");
+    var percent = Math.floor((dots * marked) / 100);
+    var points = "";
+    var rotate = 360 / dots;
+
+    for (let i = 0; i < dots; i++) {
+        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
+    }
+    elem.innerHTML = points;
+
+    const pointsMarked = elem.querySelectorAll('.points');
+    for (let i = 0; i < percent; i++) {
+        pointsMarked[i].classList.add('marked');
+    }
+});
+
+-----------------------------------------------------------------
+
