@@ -23,7 +23,7 @@ To explore PeacockPortfolios:
 
 ## Feedback and Collaboration
 
-Your feedback and collaboration are highly valued. If you have suggestions, ideas, or would like to work together, please reach out to me at [your-email@example.com].
+Your feedback and collaboration are highly valued. If you have suggestions, ideas, or would like to work together, please reach out to me at [pendelajayadeep@gmail.com].
 
 ## License
 
